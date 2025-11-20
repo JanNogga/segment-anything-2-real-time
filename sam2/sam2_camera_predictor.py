@@ -1267,7 +1267,7 @@ class SAM2CameraPredictorVOS(SAM2CameraPredictor):
                 self.memory_encoder.forward,
                 mode="max-autotune",
                 fullgraph=True,
-                dynamic=False,
+                dynamic=True,
             )
         if self.compile_memory_attention:
             print("Compiling memory attention...")
